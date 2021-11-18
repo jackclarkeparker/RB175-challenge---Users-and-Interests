@@ -30,6 +30,8 @@ get "/users/:name" do
   @user = params[:name]
   @display_name = @user.capitalize
   @title = "#{@display_name}'s page"
+  @interests = @user_data[@user.intern][:interests]
+  @email = @user_data[@user.intern][:email]
 
   erb :user
 end

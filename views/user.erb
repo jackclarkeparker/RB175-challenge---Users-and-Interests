@@ -2,9 +2,9 @@
 <br>
 <h2>Interests:</h2>
 
-<p><%= @user_data[@user.intern][:interests].map(&:capitalize).join(", ") %></p>
+<p><%= @interests.map(&:capitalize).join(", ") %></p>
 
-<p><strong>Contact:</strong> <em><%= @user_data[@user.intern][:email] %></em></p>
+<p><strong>Contact:</strong> <em><%= @email %></em></p>
 
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br><br><br><br><br><br>
