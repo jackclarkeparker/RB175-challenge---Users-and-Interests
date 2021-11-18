@@ -1,0 +1,17 @@
+<h1><%= @display_name %>'s Page</h1>
+<br>
+<h2>Interests:</h2>
+
+<p><%= @user_data[@user.intern][:interests].map(&:capitalize).join(", ") %></p>
+
+<p><strong>Contact:</strong> <em><%= @user_data[@user.intern][:email] %></em></p>
+
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+<h3>Other users</h3>
+<ul>
+  <% @user_data.reject { |user, data| user == @user.intern }.each_key do |user| %>
+    <li><a href="<%= user %>"><%= user.capitalize %></a></li>
+  <% end %>
+</ul>
